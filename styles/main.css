@@ -20,6 +20,10 @@ body {
     background-color: white;
 }
 
+/******************************************************
+*********************** HEADER ************************
+*******************************************************/
+
 header {
     display: flex;
     align-items: center;
@@ -34,14 +38,18 @@ header h2 {
     text-shadow: 2px 2px 15px grey;
 }
 
+/******************************************************
+*********************** LINKS *************************
+*******************************************************/
+
 a:link,
 a:visited {
-    color: steelblue;
+    color: maroon;
 }
 
 a:hover,
 a:active {
-    color: maroon;
+    color: steelblue;
 }
 
 aside a {
@@ -49,19 +57,112 @@ aside a {
 }
 
 aside a:visited {
+    color: steelblue;
+}
+
+/******************************************************
+**************** HORIZONTAL NAV MENU ******************
+*******************************************************/
+
+#nav_menu {
+    border-bottom: 3px solid steelblue;
+    background-color: steelblue;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    position: relative;
+    display: flex;
+}
+
+#nav_menu li {
+    width: 20%;
+}
+
+#nav_menu a {
+    display: block;
+    color: white;
+    background-color: steelblue;
+    text-align: center;
+    padding: .7em 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#nav_menu ul ul li a {
+    text-align: left;
+    padding-left: .75em;
+}
+
+#nav_menu ul li:hover>ul {
+    display: block;
+}
+
+#nav_menu a:hover {
+    color: black;
+    background-color: lightsteelblue;
+}
+
+/******************************************************
+****************** VERTICAL NAV MENU ******************
+*******************************************************/
+
+#nav_list h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
     color: maroon;
 }
+
+#nav_list ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+#nav_list li {
+    width: 90%;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+}
+
+#nav_list a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    padding: .5em;
+    color: black;
+}
+
+#nav_list a:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+/******************************************************
+************************ MAIN *************************
+*******************************************************/
 
 main {
     display: flex;
 }
 
 section {
-    max-width: 75%;
+    max-width: 70%;
 }
 
 aside {
-    max-width: 25%;
+    width: 30%;
 }
 
 h1 {
@@ -70,21 +171,22 @@ h1 {
 
 section p,
 section h2,
-section h4,
-aside h2 {
+section h4 {
     margin: 0 3% 20px;
 }
 
-aside h2 {
-    margin-top: 20px;
+/* aside h2 {
+    margin: 0 3% 20px;
+    margin-top: 25px;
     color: maroon;
+    text-align: center;
 }
 
 aside ul {
     margin-left: 6%;
     line-height: 1.5;
     padding-left: 5%;
-}
+} */
 
 blockquote {
     margin: 0 10% 20px;
@@ -93,9 +195,13 @@ blockquote {
     background-color: rgb(209, 224, 244);
 }
 
-h4 {
-    font-weight: normal;
+h4 a {
+    font-weight: bold;
 }
+
+/******************************************************
+*********************** FOOTER ************************
+*******************************************************/
 
 footer {
     background-color: steelblue;
