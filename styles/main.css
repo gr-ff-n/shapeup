@@ -203,7 +203,8 @@ h1 {
     text-shadow: 1px 1px 2px black, -1px -1px 2px black, -1px 1px 2px black, 1px -1px 2px black;
 }
 
-section h2, section h4 {
+section h2,
+section h4 {
     margin: 0 0 20px;
 }
 
@@ -222,7 +223,8 @@ section h4 a {
     font-size: 130%;
 }
 
-section h4 a:link, section h4 a:visited {
+section h4 a:link,
+section h4 a:visited {
     color: black;
     transition: color ease-in-out 300ms;
 }
@@ -284,4 +286,90 @@ footer {
 footer p {
     padding: 20px 0;
     font-variant: small-caps;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+/******************************************************
+******************* MEDIA QUERIES *********************
+*******************************************************/
+
+@media only screen and (max-width: 933px) {
+    body {
+        box-shadow: none;
+        font-size: 90%;
+    }
+
+    main {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        margin: 0 auto;
+    }
+
+    #left {
+        order: 2;
+        flex: 0 1 90%;
+    }
+
+    section {
+        flex: 0 1 70%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #mobilemenu {
+        display: block;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    .slicknav_menu {
+        background-color: steelblue;
+    }
+
+    #mobilemenu a {
+        color: white;
+    }
+
+    header h1 {
+        size: 200%;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    #left h2, #right h2 {
+        font-size: 150%;
+    }
+
+    #right {
+        order: 3;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1vh;
+    }
+
+    header h2 {
+        font-size: 250%;
+    }
+
+    header h3 {
+        font-size: 90%;
+    }
 }
